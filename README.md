@@ -1,35 +1,10 @@
-# Pokémon Red and Blue
+# pokeredcorrupt
 
-This is a disassembly of Pokémon Red and Blue.
+Pokemon Red but with a built-in memory corruptor!
 
-It builds the following roms:
+Set $C000 to any non-zero value and the game will corrupt memory every frame!
 
-* Pokemon Red (UE) [S][!].gb  `md5: 3d45c1ee9abd5738df46d2bdda8b57dc`
-* Pokemon Blue (UE) [S][!].gb `md5: 50927e843568814f7ed45ec4f944bd8b`
+## Gameshark codes (for emulators that don't have easy-to-use debuggers)
 
-To set up the repository, see [**INSTALL.md**](INSTALL.md).
-
-
-## See also
-
-* Disassembly of [**Pokémon Yellow**][pokeyellow]
-* Disassembly of [**Pokémon Gold**][pokegold]
-* Disassembly of [**Pokémon Crystal**][pokecrystal]
-* Disassembly of [**Pokémon Pinball**][pokepinball]
-* Disassembly of [**Pokémon TCG**][poketcg]
-* Disassembly of [**Pokémon Ruby**][pokeruby]
-* Disassembly of [**Pokémon Fire Red**][pokefirered]
-* Disassembly of [**Pokémon Emerald**][pokeemerald]
-* Discord: [**pret**][Discord]
-* irc: **irc.freenode.net** [**#pret**][irc]
-
-[pokeyellow]: https://github.com/pret/pokeyellow
-[pokegold]: https://github.com/pret/pokegold
-[pokecrystal]: https://github.com/pret/pokecrystal
-[pokepinball]: https://github.com/pret/pokepinball
-[poketcg]: https://github.com/pret/poketcg
-[pokeruby]: https://github.com/pret/pokeruby
-[pokefirered]: https://github.com/pret/pokefirered
-[pokeemerald]: https://github.com/pret/pokeemerald
-[Discord]: https://discord.gg/cJxDDVP
-[irc]: https://kiwiirc.com/client/irc.freenode.net/?#pret
+`010100C0` - set $C000 to $01, turning on the corruptor
+`010000C0` - set $C000 to $00, turning off the corruptor
