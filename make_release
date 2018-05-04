@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Makes a release.
+
+echo "Making a release..."
+
+# Make a clean new ROM of this hack
+# make clean
+make
+
+# Make a release directory and move the ROMs and symbol files into it.
+echo "Making temporary directory..."
+mkdir rel
+cp poke* rel
+cd rel
+rm pokered.link
+
+# Copy the release README into the release directory
+cp ../release_readme.txt ./README.txt
+
+# Zip the whole thing
+echo "Making zip file..."
+zip release.zip *
+
+# Move it to the main directory
+mv release.zip ../
+
+echo "Done! Release in release.zip!"
