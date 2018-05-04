@@ -49,7 +49,13 @@ MainMenu:
 	coord hl, 2, 2
 	ld de, NewGameText
 	call PlaceString
-.next2
+.next2	coord hl, 2, 13
+	ld b, 3
+	ld c, 13
+	call TextBoxBorder
+	ld de, CreditText
+	coord hl, 5, 14
+	call PlaceString
 	ld hl, wd730
 	res 6, [hl]
 	call UpdateSprites
@@ -334,6 +340,10 @@ ContinueText:
 NewGameText:
 	db   "NEW GAME"
 	next "OPTION@"
+
+CreditText:
+	db   "CORRUPTOR"
+	next " BY MR9K@"
 
 CableClubOptionsText:
 	db   "TRADE CENTER"
