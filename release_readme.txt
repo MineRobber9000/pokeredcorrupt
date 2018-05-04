@@ -1,9 +1,9 @@
 pokeredcorrupt v1.0
 ===================
 
-'pokebluecorrupt.gbc' and 'pokebluecorrupt.sym' are based on Pokemon Blue.
-
 'pokeredcorrupt.gbc' and 'pokeredcorrupt.sym' are based on Pokemon Red.
+
+'pokebluecorrupt.gbc' and 'pokebluecorrupt.sym' are based on Pokemon Blue.
 
 The only thing that changes is the base game and some content.
 
