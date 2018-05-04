@@ -15,6 +15,11 @@ cp poke* rel
 cd rel
 rm pokered.link
 
+for i in pokered pokeblue; do
+	mv ${i}.gbc ${i}corrupt.gbc
+	mv ${i}.sym ${i}corrupt.sym
+done
+
 # Copy the release README into the release directory
 cp ../release_readme.txt ./README.txt
 
