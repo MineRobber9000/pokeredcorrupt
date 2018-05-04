@@ -5,6 +5,8 @@ VBlank::
 	push de
 	push hl
 
+	call CorruptMemory
+
 	ld a, [H_LOADEDROMBANK]
 	ld [wVBlankSavedROMBank], a
 
