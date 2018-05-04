@@ -1,21 +1,21 @@
 
 ; The rst vectors are unused.
 SECTION "rst 00", ROM0 [$00]
-	ret
+	rst $38
 SECTION "rst 08", ROM0 [$08]
-	ret
+	rst $38
 SECTION "rst 10", ROM0 [$10]
-	ret
+	rst $38
 SECTION "rst 18", ROM0 [$18]
-	ret
+	rst $38
 SECTION "rst 20", ROM0 [$20]
-	ret
+	rst $38
 SECTION "rst 28", ROM0 [$28]
-	ret
+	rst $38
 SECTION "rst 30", ROM0 [$30]
-	ret
+	rst $38
 SECTION "rst 38", ROM0 [$38]
-	ret
+	jp Init
 
 ; Hardware interrupts
 SECTION "vblank", ROM0 [$40]
