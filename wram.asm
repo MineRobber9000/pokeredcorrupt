@@ -63,7 +63,7 @@ ENDM
 
 SECTION "WRAM Bank 0", WRAM0
 
-wUnusedC000:: ; c000
+wCorruptionFlag:: ; c000
 	ds 1
 
 wSoundID:: ; c001
