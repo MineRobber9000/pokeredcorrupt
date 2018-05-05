@@ -557,6 +557,10 @@ DisplayOptionMenu:
 	ld a, [wOptionsBattleAnimCursorX] ; battle animation cursor X coordinate
 	xor $0b ; toggle between 1 and 10
 	ld [wOptionsBattleAnimCursorX], a
+IF DEF(_OPTIONS_CORRUPT)
+	dec a
+	ld [wCorruptionFlag],a
+ENDC
 	jp .eraseOldMenuCursor
 .cursorInBattleStyle
 	ld a, [wOptionsBattleStyleCursorX] ; battle style cursor X coordinate
@@ -592,9 +596,15 @@ TextSpeedOptionText:
 	db   "TEXT SPEED"
 	next " FAST  MEDIUM SLOW@"
 
+IF DEF(_OPTIONS_CORRUPT)
+BattleAnimationOptionText:
+	db   "MEMORY CORRUPTOR"
+	next " OFF       ON@"
+ELSE
 BattleAnimationOptionText:
 	db   "BATTLE ANIMATION"
 	next " ON       OFF@"
+ENDC
 
 BattleStyleOptionText:
 	db   "BATTLE STYLE"
